@@ -9,7 +9,13 @@ const App: React.FC = () => {
   const addBoard = (newBoard: Board) => {
     setBoardList([...boardList, newBoard]);
   }
-  
+  const updateBoard = (newBoard: Board) => {
+    setBoardList(boardList.map(board => board.id === newBoard.id ? newBoard : board));
+  }
+  const deleteBoard = (id:number) => {
+    const newBoardList = boardList.filter(board => board.id !== id)
+    setBoardList(newBoardList)
+  }
   return (
     <div className="App">
       <div className="wrap">
@@ -19,6 +25,8 @@ const App: React.FC = () => {
         />
         <DisplayBoards
           boardList = {boardList}
+          updateBoard={updateBoard}
+          deleteBoard={deleteBoard}
         />
       </div>
     </div>
