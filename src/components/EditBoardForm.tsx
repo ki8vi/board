@@ -44,7 +44,7 @@ const EditBoardForm: React.FC<EditBoardFormProps> = ({data, updateBoard, handleE
         <input 
         name="img"
         type="text"
-        placeholder="Изображение"
+        placeholder="Описание"
         onChange={handleChange}
         value={editBoard.img}
         />

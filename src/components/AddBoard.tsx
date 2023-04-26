@@ -51,7 +51,7 @@ const AddBoard: React.FC<addBoardProps> = ({addBoard}) => {
             <input 
             name="img"
             type="text"
-            placeholder="Изображение"
+            placeholder="Описание"
             onChange={handleChange}
             value={newBoard.img}
             />
